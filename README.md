@@ -138,5 +138,5 @@ src/test/java/com/meta/concurrency/
 
 ---
 
-**Author**: Meta E7 Interview Preparation  
+**Author**: Hemant
 **Last Updated**: January 2026
