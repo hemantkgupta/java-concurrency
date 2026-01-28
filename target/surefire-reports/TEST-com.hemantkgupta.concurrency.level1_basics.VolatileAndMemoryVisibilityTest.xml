@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="4.828" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/hemantkgupta/offline/java-work-all/java-concurrency/target/test-classes:/Users/hemantkgupta/offline/java-work-all/java-concurrency/target/classes:/Users/hemantkgupta/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/hemantkgupta/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/hemantkgupta/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/hemantkgupta/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/hemantkgupta/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hemantkgupta/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/hemantkgupta/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/hemantkgupta/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/hemantkgupta/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/hemantkgupta/.m2/repository/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21.jar:/Users/hemantkgupta/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/hemantkgupta/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/hemantkgupta/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/hemantkgupta/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/hemantkgupta/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/hemantkgupta/.m2/repository/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.jar:/Users/hemantkgupta/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/hemantkgupta/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/hemantkgupta/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/hemantkgupta/.m2/repository/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar:/Users/hemantkgupta/.m2/repository/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar:/Users/hemantkgupta/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/hemantkgupta/offline/java-work-all/java-concurrency/target/surefire/surefirebooter-20260128173558030_3.jar /Users/hemantkgupta/offline/java-work-all/java-concurrency/target/surefire 2026-01-28T17-35-57_802-jvmRun1 surefire-20260128173558030_1tmp surefire_0-20260128173558030_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/hemantkgupta/offline/java-work-all/java-concurrency/target/test-classes:/Users/hemantkgupta/offline/java-work-all/java-concurrency/target/classes:/Users/hemantkgupta/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/hemantkgupta/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/hemantkgupta/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/hemantkgupta/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/hemantkgupta/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/hemantkgupta/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/hemantkgupta/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/hemantkgupta/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/hemantkgupta/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/hemantkgupta/.m2/repository/net/bytebuddy/byte-buddy/1.12.21/byte-buddy-1.12.21.jar:/Users/hemantkgupta/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/hemantkgupta/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/hemantkgupta/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/hemantkgupta/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/hemantkgupta/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/hemantkgupta/.m2/repository/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.jar:/Users/hemantkgupta/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/hemantkgupta/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/hemantkgupta/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/hemantkgupta/.m2/repository/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar:/Users/hemantkgupta/.m2/repository/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar:/Users/hemantkgupta/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/hemantkgupta"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk@17/17.0.15/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/hemantkgupta/offline/java-work-all/java-concurrency"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/Users/hemantkgupta/offline/java-work-all/java-concurrency/target/surefire/surefirebooter-20260128173558030_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="17.0.15+0"/>
+    <property name="user.name" value="hemantkgupta"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/hemantkgupta/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/nn/_p_v23kx7gn_k6f57w27rhq40000gn/T/"/>
+    <property name="java.version" value="17.0.15"/>
+    <property name="user.dir" value="/Users/hemantkgupta/offline/java-work-all/java-concurrency"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/hemantkgupta/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="17.0.15+0"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testVolatileNonAtomicity" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="0.107">
+    <system-out><![CDATA[17:35:58,358 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.4.14
+17:35:58,358 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fb759d6 - No custom configurators were discovered as a service.
+17:35:58,358 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fb759d6 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+17:35:58,361 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fb759d6 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+17:35:58,363 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+17:35:58,364 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+17:35:58,367 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fb759d6 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 3 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+17:35:58,367 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fb759d6 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+17:35:58,367 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fb759d6 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+17:35:58,368 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback-test.xml] at [file:/Users/hemantkgupta/offline/java-work-all/java-concurrency/target/test-classes/logback-test.xml]
+17:35:58,410 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+17:35:58,410 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+17:35:58,413 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+17:35:58,427 |-WARN in ch.qos.logback.core.model.processor.AppenderModelHandler - Appender named [FILE] not referenced. Skipping further processing.
+17:35:58,427 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+17:35:58,427 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+17:35:58,427 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [com.meta.concurrency] to DEBUG
+17:35:58,427 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@4b8d604b - End of configuration.
+17:35:58,427 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@5e7cd6cc - Registering current configuration as safe fallback point
+17:35:58,427 |-INFO in ch.qos.logback.classic.util.ContextInitializer@5fb759d6 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 60 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+17:35:58.430 [main] INFO  c.h.c.l.VolatileAndMemoryVisibility - Expected: 10000, Actual: 10000 (race condition!)
+]]></system-out>
+  </testcase>
+  <testcase name="testSingletonDoubleCheckedLocking" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="0.025"/>
+  <testcase name="testGracefulShutdown" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="1.041">
+    <system-out><![CDATA[17:35:58.462 [Worker] INFO  c.h.c.l.VolatileAndMemoryVisibility - Worker started
+17:35:59.468 [main] INFO  c.h.c.l.VolatileAndMemoryVisibility - Requesting shutdown
+17:35:59.500 [Worker] INFO  c.h.c.l.VolatileAndMemoryVisibility - Worker shutting down gracefully after 10 tasks
+]]></system-out>
+  </testcase>
+  <testcase name="testHappensBeforeGuarantee" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="0.109"/>
+  <testcase name="testVolatileRepeated" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="0.503"/>
+  <testcase name="testVolatileRepeated" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="0.503"/>
+  <testcase name="testVolatileRepeated" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="0.506"/>
+  <testcase name="testVolatileRepeated" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="0.503"/>
+  <testcase name="testVolatileRepeated" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="0.502"/>
+  <testcase name="testVolatileVisibility" classname="com.hemantkgupta.concurrency.level1_basics.VolatileAndMemoryVisibilityTest" time="1.007">
+    <system-out><![CDATA[17:36:02.140 [Reader-Thread] INFO  c.h.c.l.VolatileAndMemoryVisibility - Reader: Starting to read
+17:36:03.145 [Writer-Thread] INFO  c.h.c.l.VolatileAndMemoryVisibility - Writer: Setting running to false
+17:36:03.145 [Reader-Thread] INFO  c.h.c.l.VolatileAndMemoryVisibility - Reader: Exited loop after 1764360359 iterations, counter=42
+17:36:03.145 [main] INFO  c.h.c.l.VolatileAndMemoryVisibility - SUCCESS: Reader thread terminated correctly
+]]></system-out>
+  </testcase>
+</testsuite>
