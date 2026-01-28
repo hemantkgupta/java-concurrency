@@ -1,8 +1,8 @@
-# Java Concurrency Mastery 🚀
+# Java Concurrency Mastery
 
 A comprehensive hands-on project to master Java concurrency from beginner to advanced level for Meta E7 System Design Interviews.
 
-## 📚 Learning Path
+## Learning Path
 
 ### **Level 1: Basics** (Beginner)
 - Thread creation and lifecycle
@@ -53,7 +53,7 @@ A comprehensive hands-on project to master Java concurrency from beginner to adv
 - Custom synchronizers with AQS
 - Thread-safe data structures
 
-## 🛠️ Setup
+## Setup
 
 ### Prerequisites
 - Java 17+
@@ -91,15 +91,15 @@ mvn exec:java -Dexec.mainClass="com.meta.concurrency.level1_basics.BasicThreadEx
 4. **Experiment**: Modify code to see different behaviors
 5. **Interview Focus**: Comments highlight Meta E7-level insights
 
-## 🎯 Meta E7 Interview Tips
+## Tips
 
 Each level includes:
-- ✅ **Production-ready patterns** used at Meta scale
-- ⚠️ **Common pitfalls** to avoid in interviews
-- 💡 **E7-level insights** on performance and trade-offs
-- 📊 **When to use** each primitive in system design
+- **Production-ready patterns** used at Meta scale
+- **Common pitfalls** to avoid in interviews
+- **E7-level insights** on performance and trade-offs
+- **When to use** each primitive in system design
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 src/main/java/com/meta/concurrency/
@@ -115,21 +115,21 @@ src/test/java/com/meta/concurrency/
 └── [same structure with tests]
 ```
 
-## 🔍 Testing Strategy
+## Testing Strategy
 
 - **Unit Tests**: Verify correctness of concurrent code
 - **Stress Tests**: Test under high contention
 - **Race Condition Tests**: Demonstrate thread safety issues
 - **Performance Tests**: Compare different approaches
 
-## 📝 Notes
+## Notes
 
 - All examples use Java 17 features
 - Tests use JUnit 5, AssertJ, and Awaitility
 - Logging configured with SLF4J + Logback
 - Examples focus on practical system design scenarios
 
-## 🚀 Next Steps After Completion
+## Next Steps After Completion
 
 1. Build mini-projects: Rate Limiter, Cache, Job Scheduler
 2. Practice system design with concurrency focus
